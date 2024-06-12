@@ -1,0 +1,9 @@
+﻿  abu string.cpp
+C:\Users\omarh\OOP\abu string\abu string\abu string.cpp(62,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\abu string\abu string\abu string.cpp(86,29): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\abu string\abu string\abu string.cpp(222,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\abu string\abu string\abu string.cpp(245,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\abu string\abu string\abu string.cpp(270,17): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\abu string\abu string\abu string.cpp(282,17): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\abu string\abu string\abu string.cpp(300,22): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+  abu string.vcxproj -> C:\Users\omarh\OOP\abu string\x64\Debug\abu string.exe
