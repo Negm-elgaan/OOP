@@ -977,6 +977,54 @@ class ClsDate
         return DecreaseDateByOneMillennium(*this);
     }
 };
+class clsPeriod
+{
+public:
+
+    ClsDate StartDate;
+    ClsDate EndDate;
+
+    clsPeriod(ClsDate StartDate, ClsDate DateTo)
+    {
+        this->StartDate = StartDate;
+        this->EndDate = EndDate;
+
+    }
+
+    static bool IsOverlapPeriods(clsPeriod Period1, clsPeriod Period2)
+    {
+
+        if (
+            ClsDate::CompareDates(Period2.EndDate, Period1.StartDate) == ClsDate::enDateCompare::Before
+            ||
+            ClsDate::CompareDates(Period2.StartDate, Period1.EndDate) == ClsDate::enDateCompare::After
+            )
+            return false;
+        else
+            return true;
+
+    }
+
+
+    bool IsOverLapWith(clsPeriod Period2)
+    {
+        return IsOverlapPeriods(*this, Period2);
+    }
+
+    void Print()
+    {
+        cout << "Period Start: ";
+        StartDate.Print();
+
+
+        cout << "Period End: ";
+        EndDate.Print();
+
+
+    }
+
+};
+
 int main()
 {
     ClsDate Date1(189,2024);
