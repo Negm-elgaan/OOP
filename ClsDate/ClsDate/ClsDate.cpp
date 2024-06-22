@@ -79,31 +79,12 @@ class ClsDate
         }
         ClsDate(short day, short year)
         {
-            GetDateFromDayOrderInYear(day, year);
+            ClsDate date = GetDateFromDayOrderInYear(day, year);
+            _Year = date._Year;
+            _Month = date._Month;
+            _Day = date._Day;
             return;
         }
-        /*void GetDateFromDayOrderInYear(short DateOrderInYear, short Year)
-        {
-            short RemainingDays = DateOrderInYear;
-            short MonthDays = 0;
-            _Year = Year;
-            _Month = 1;
-            while (true)
-            {
-                MonthDays = NumberOfDaysInAMonth(_Month, _Year);
-                if (RemainingDays > MonthDays)
-                {
-                    RemainingDays -= MonthDays;
-                    _Month++;
-                }
-                else
-                {
-                    _Day = RemainingDays;
-                    break;
-                }
-            }
-            return;
-        }*/
         void Print()
         {
             cout << _Day << "/" << _Month << "/" << _Year << endl;
@@ -378,7 +359,7 @@ class ClsDate
         }
         return date;
     }
-    static ClsDate IncreaseDateByOneDay(ClsDate Date)
+    static ClsDate IncreaseDateByOneDay(ClsDate &Date)
     {
         if (IsLastDayInMonth(Date))
         {
@@ -437,7 +418,7 @@ class ClsDate
     {
         return DifferenceBetweenDates2(*this, Date2);
     }
-    static void  SwapDates(ClsDate Date1, ClsDate Date2)
+    static void  SwapDates(ClsDate& Date1, ClsDate& Date2)
     {
         ClsDate TempDate;
         TempDate._Year = Date1._Year;
@@ -512,7 +493,7 @@ class ClsDate
         Date._Year = ReadYear();
         return Date;
     }
-    static ClsDate IncreaseDateByOneWeek(ClsDate Date)
+    static ClsDate IncreaseDateByOneWeek(ClsDate& Date)
     {
         for (int i = 1; i <= 7; i++)
         {
@@ -524,7 +505,7 @@ class ClsDate
     {
         return IncreaseDateByOneWeek(*this);
     }
-    static ClsDate IncreaseDateByXWeeks(short Weeks, ClsDate Date)
+    static ClsDate IncreaseDateByXWeeks(short Weeks, ClsDate& Date)
     {
         for (short i = 1; i <= Weeks; i++)
         {
@@ -536,7 +517,7 @@ class ClsDate
     {
         return IncreaseDateByXWeeks(weeks,*this);
     }
-    static ClsDate IncreaseDateByOneMonth(ClsDate Date)
+    static ClsDate IncreaseDateByOneMonth(ClsDate& Date)
     {
         if (Date._Month == 12)
         {
@@ -558,7 +539,7 @@ class ClsDate
     {
         return IncreaseDateByOneMonth(*this);
     }
-    static ClsDate IncreaseDateByXDays(short Days, ClsDate Date)
+    static ClsDate IncreaseDateByXDays(short Days, ClsDate& Date)
     {
         for (short i = 1; i <= Days; i++)
         {
@@ -570,7 +551,7 @@ class ClsDate
     {
       return IncreaseDateByXDays(Days,*this) ;
     }
-    static ClsDate IncreaseDateByXMonths(short Months, ClsDate Date)
+    static ClsDate IncreaseDateByXMonths(short Months, ClsDate& Date)
     {
         for (short i = 1; i <= Months; i++)
         {
@@ -582,7 +563,7 @@ class ClsDate
     {
         return IncreaseDateByXMonths(Months, *this);
     }
-    static ClsDate IncreaseDateByOneYear(ClsDate Date)
+    static ClsDate IncreaseDateByOneYear(ClsDate& Date)
     {
         Date._Year++;
         return Date;
@@ -591,7 +572,7 @@ class ClsDate
     {
         return IncreaseDateByOneYear(*this);
     }
-    static ClsDate IncreaseDateByXYears(short Years, ClsDate Date)
+    static ClsDate IncreaseDateByXYears(short Years, ClsDate& Date)
     {
         for (short i = 1; i <= Years; i++)
         {
@@ -603,7 +584,7 @@ class ClsDate
     {
         return IncreaseDateByXYears(Years, *this);
     }
-    static ClsDate IncreaseDateByXYearsFaster(short Years, ClsDate Date)
+    static ClsDate IncreaseDateByXYearsFaster(short Years, ClsDate& Date)
     {
         Date._Year += Years;
         return Date;
@@ -612,7 +593,7 @@ class ClsDate
     {
         return IncreaseDateByXYearsFaster(Years, *this);
     }
-    static ClsDate IncreaseDateByOneDecade(ClsDate Date)
+    static ClsDate IncreaseDateByOneDecade(ClsDate& Date)
     {
         //Period of 10years
         Date._Year += 10;
@@ -622,7 +603,7 @@ class ClsDate
     {
         return IncreaseDateByOneDecade(*this);
     }
-    static ClsDate IncreaseDateByXDecades(short Decade, ClsDate Date)
+    static ClsDate IncreaseDateByXDecades(short Decade, ClsDate& Date)
     {
         for (short i = 1; i <= Decade * 10; i++)
         {
@@ -634,7 +615,7 @@ class ClsDate
     {
         return IncreaseDateByXDecades(Decades, *this);
     }
-    static ClsDate IncreaseDateByXDecadesFaster(short Decade, ClsDate Date)
+    static ClsDate IncreaseDateByXDecadesFaster(short Decade, ClsDate& Date)
     {
         Date._Year += Decade * 10;
         return Date;
@@ -643,7 +624,7 @@ class ClsDate
     {
         return IncreaseDateByXDecadesFaster(Decades, *this);
     }
-    static ClsDate IncreaseDateByOneCentury(ClsDate Date)
+    static ClsDate IncreaseDateByOneCentury(ClsDate& Date)
     {
         //Period of 100 years
         Date._Year += 100;
@@ -653,7 +634,7 @@ class ClsDate
     {
         return IncreaseDateByOneCentury(*this);
     }
-    static ClsDate IncreaseDateByOneMillennium(ClsDate Date)
+    static ClsDate IncreaseDateByOneMillennium(ClsDate& Date)
     {
         //Period of 1000 years
         Date._Year += 1000;
@@ -663,7 +644,7 @@ class ClsDate
     {
         return IncreaseDateByOneMillennium(*this);
     }
-    static ClsDate SubXDaysFromDate(short DaysToSubFrom , ClsDate Date)
+    static ClsDate SubXDaysFromDate(short DaysToSubFrom , ClsDate& Date)
     {
         short days = DaysPassed(Date._Day,Date._Month,Date._Year) ;
         if (days < DaysToSubFrom)
@@ -702,7 +683,7 @@ class ClsDate
     }
     string GetDayName()
     {
-        GetDayName(_Day);
+        return GetDayName(_Day);
     }
     static bool IsEndOfWeek0(ClsDate date)
     {
@@ -767,31 +748,10 @@ class ClsDate
     {
         return NumberOfDaysInAYear(date._Year) - (DaysPassed(date._Day , date._Month , date._Year) - 1);
     }
-    string DayShortName(short DayOfWeekOrder)
-    {
-        string arrDayNames[] = { "Sun","Mon","Tue","Wed","Thu","Fri","Sat" };
-        return arrDayNames[DayOfWeekOrder];
-    }
     short IsEndOfWeek(ClsDate Date)
     {
         return  Date.DayOfWeekOrder() == 6;
     }
-    /*bool IsWeekEnd(stDate Date)
-    { //Weekends are Fri and Sat
-        short DayIndex = DayOfWeekOrder(Date);
-        return  (DayIndex == 5 || DayIndex == 6);
-    }
-    bool IsBusinessDay(stDate Date)
-    {
-        //Weekends are Sun,Mon,Tue,Wed and Thur
-        /*
-        short DayIndex = DayOfWeekOrder(Date);
-        return  (DayIndex >= 5 && DayIndex <= 4);
-        */
-
-        //shorter method is to invert the IsWeekEnd: this will save updating code.
-    /*return !IsWeekEnd(Date);
-    }*/
     static short CalculateVacationDays(ClsDate DateFrom, ClsDate DateTo)
     {
         short DaysCount = 0;
@@ -879,7 +839,7 @@ class ClsDate
     {
         return CompareDates(*this, Date2);
     }
-    static ClsDate DecreaseDateByOneDay(ClsDate Date)
+    static ClsDate DecreaseDateByOneDay(ClsDate& Date)
     {
         if (Date._Day == 1)
         {
@@ -901,7 +861,7 @@ class ClsDate
         }
         return Date;
     }
-    static ClsDate DecreaseDateByOneWeek(ClsDate Date)
+    static ClsDate DecreaseDateByOneWeek(ClsDate& Date)
     {
         for (int i = 1; i <= 7; i++)
         {
@@ -909,7 +869,7 @@ class ClsDate
         }
         return Date;
     }
-    static ClsDate DecreaseDateByXWeeks(short Weeks, ClsDate Date)
+    static ClsDate DecreaseDateByXWeeks(short Weeks, ClsDate& Date)
     {
         for (short i = 1; i <= Weeks; i++)
         {
@@ -917,7 +877,7 @@ class ClsDate
         }
         return Date;
     }
-    static ClsDate DecreaseDateByOneMonth(ClsDate Date)
+    static ClsDate DecreaseDateByOneMonth(ClsDate& Date)
     {
         if (Date._Month == 1)
         {
@@ -935,7 +895,7 @@ class ClsDate
         }
         return Date;
     }
-    static ClsDate DecreaseDateByXDays(short Days, ClsDate Date)
+    static ClsDate DecreaseDateByXDays(short Days, ClsDate& Date)
     {
         for (short i = 1; i <= Days; i++)
         {
@@ -943,7 +903,7 @@ class ClsDate
         }
         return Date;
     }
-    static ClsDate DecreaseDateByXMonths(short Months, ClsDate Date)
+    static ClsDate DecreaseDateByXMonths(short Months, ClsDate& Date)
     {
         for (short i = 1; i <= Months; i++)
         {
@@ -951,12 +911,12 @@ class ClsDate
         }
         return Date;
     }
-    static ClsDate DecreaseDateByOneYear(ClsDate Date)
+    static ClsDate DecreaseDateByOneYear(ClsDate& Date)
     {
         Date._Year--;
         return Date;
     }
-    static ClsDate DecreaseDateByXYears(short Years, ClsDate Date)
+    static ClsDate DecreaseDateByXYears(short Years, ClsDate& Date)
     {
         for (short i = 1; i <= Years; i++)
         {
@@ -964,7 +924,7 @@ class ClsDate
         }
         return Date;
     }
-    static ClsDate DecreaseDateByXYearsFaster(short Years, ClsDate Date)
+    static ClsDate DecreaseDateByXYearsFaster(short Years, ClsDate& Date)
     {
         Date._Year -= Years;
         return Date;
@@ -975,7 +935,7 @@ class ClsDate
         Date._Year -= 10;
         return Date;
     }
-    static ClsDate DecreaseDateByXDecades(short Decade, ClsDate Date)
+    static ClsDate DecreaseDateByXDecades(short Decade, ClsDate& Date)
     {
         for (short i = 1; i <= Decade * 10; i++)
         {
@@ -987,7 +947,7 @@ class ClsDate
     {
         return DecreaseDateByXDecades(decade,*this);
     }
-    static ClsDate DecreaseDateByXDecadesFaster(short Decade, ClsDate Date)
+    static ClsDate DecreaseDateByXDecadesFaster(short Decade, ClsDate& Date)
     {
         Date._Year -= Decade * 10;
         return Date;
@@ -996,7 +956,7 @@ class ClsDate
     {
         return DecreaseDateByXDecades(D, *this);
     }
-    static ClsDate DecreaseDateByOneCentury(ClsDate Date)
+    static ClsDate DecreaseDateByOneCentury(ClsDate& Date)
     {
         //Period of 100 years
         Date._Year -= 100;
@@ -1006,7 +966,7 @@ class ClsDate
     {
         return DecreaseDateByOneCentury(*this);
     }
-    static ClsDate DecreaseDateByOneMillennium(ClsDate Date)
+    static ClsDate DecreaseDateByOneMillennium(ClsDate& Date)
     {
         //Period of 1000 years
         Date._Year -= 1000;
@@ -1019,8 +979,12 @@ class ClsDate
 };
 int main()
 {
-    ClsDate Date1(168, 2024);
+    ClsDate Date1(189,2024);
     Date1.Print();
+    Date1.IncreaseDateByOneMillennium();
+    Date1.Print();
+    //Date1.IncreaseDateByOneCentury();
+    //Date1.Print();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

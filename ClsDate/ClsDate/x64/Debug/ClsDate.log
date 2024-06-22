@@ -1,3 +1,6 @@
 ﻿  ClsDate.cpp
-C:\Users\omarh\OOP\ClsDate\ClsDate\ClsDate.cpp(21,34): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\ClsDate\ClsDate\ClsDate.cpp(826,68): warning C4091: 'static ': ignored on left of 'ClsDate::enDateCompare' when no variable is declared
+C:\Users\omarh\OOP\ClsDate\ClsDate\ClsDate.cpp(22,34): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\omarh\OOP\ClsDate\ClsDate\ClsDate.cpp(242,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\omarh\OOP\ClsDate\ClsDate\ClsDate.cpp(263,42): warning C4244: 'argument': conversion from 'float' to 'short', possible loss of data
   ClsDate.vcxproj -> C:\Users\omarh\OOP\ClsDate\x64\Debug\ClsDate.exe
