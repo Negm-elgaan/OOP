@@ -1,0 +1,3 @@
+﻿  ClsDate.cpp
+C:\Users\omarh\OOP\ClsDate\ClsDate\ClsDate.cpp(21,34): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  ClsDate.vcxproj -> C:\Users\omarh\OOP\ClsDate\x64\Debug\ClsDate.exe
