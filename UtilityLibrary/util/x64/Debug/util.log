@@ -1,0 +1,28 @@
+﻿  util.cpp
+C:\Users\omarh\OOP\util\util\util.cpp(228,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\omarh\OOP\util\util\util.cpp(238,28): error C2061: syntax error: identifier 'ClsDate'
+C:\Users\omarh\OOP\util\util\util.cpp(270,16): error C2535: 'int UtilityLibrary::RandomNumber(int,int)': member function already defined or declared
+  C:\Users\omarh\OOP\util\util\util.cpp(35,16):
+  see declaration of 'UtilityLibrary::RandomNumber'
+  
+C:\Users\omarh\OOP\util\util\util.cpp(240,9): error C2065: 'ClsDate': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(240,17): error C2146: syntax error: missing ';' before identifier 'TempDate'
+C:\Users\omarh\OOP\util\util\util.cpp(240,17): error C2065: 'TempDate': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(241,9): error C2065: 'TempDate': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(241,26): error C2065: 'Date1': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(242,9): error C2065: 'TempDate': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(242,27): error C2065: 'Date1': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(243,9): error C2065: 'TempDate': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(243,25): error C2065: 'Date1': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(244,9): error C2065: 'Date1': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(244,23): error C2065: 'Date2': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(245,9): error C2065: 'Date1': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(245,24): error C2065: 'Date2': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(246,9): error C2065: 'Date1': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(246,22): error C2065: 'Date2': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(247,9): error C2065: 'Date2': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(247,23): error C2065: 'TempDate': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(248,9): error C2065: 'Date2': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(248,24): error C2065: 'TempDate': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(249,9): error C2065: 'Date2': undeclared identifier
+C:\Users\omarh\OOP\util\util\util.cpp(249,22): error C2065: 'TempDate': undeclared identifier
