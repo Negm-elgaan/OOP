@@ -1,0 +1,5 @@
+﻿  clsvalidatelibrary.cpp
+C:\Users\omarh\OOP\clsvalidatelibrary\clsvalidatelibrary\clsdate.h(21,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'clsvalidatelibrary.cpp')
+  
+  clsvalidatelibrary.vcxproj -> C:\Users\omarh\OOP\clsvalidatelibrary\x64\Debug\clsvalidatelibrary.exe
