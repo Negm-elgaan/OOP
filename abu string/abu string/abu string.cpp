@@ -889,9 +889,14 @@ public:
 int main()
 {
     clsString String1;
-    clsString String2("Mohammed");
+    clsString String2("Mohammed ABU HADHOUD /**/ 99990 /**/ Worker");
+    vector <string> vs = clsString::SplitString(String2.GetValue(), "/**/");
+    for (string &i : vs)
+    {
+        cout << i << endl;
+    }
 
-    String1.Value = "Ali Ahmed";
+    /*/String1.Value = "Ali Ahmed";
 
     cout << "String1 = " << String1.Value << endl;
     cout << "String2 = " << String2.Value << endl;
@@ -905,7 +910,7 @@ int main()
         clsString::CountWords("Mohammed Saqer Abu-Hadhoud");
 
 
-
+        */
     system("pause>0");
     return 0;
 };
