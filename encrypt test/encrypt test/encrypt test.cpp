@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <limits>
 using namespace std;
 class Encrypt
 {
@@ -9,6 +10,7 @@ class Encrypt
     static long long int x;
     long long int NumOfEncryptions;
     static long long int y;
+    static long long int w;
 
     void _Encrypt()
     {
@@ -18,7 +20,7 @@ class Encrypt
             _word[i] = char((long long int)_word[i] + x);
         }
         x = (x * 2) + 1;
-
+        
     }
 
     void _Decrypt()
@@ -53,9 +55,15 @@ class Encrypt
 
         void Encryption(int num = 3)
         {
+            
             for (long long int i = 0; i < num + y; i++)
+            {
                 _Encrypt();
-            y++;
+                cout << _word << endl;
+            }
+            y = (y * 2) + (w * 3);
+            w = (w * 2) * -1;
+            cout << y << "    " << w <<  "    " << x << endl;
         }
 
         void Decrypt()
@@ -65,7 +73,7 @@ class Encrypt
 };
 long long int Encrypt::x = 1;
 long long int Encrypt::y = 1;
-
+long long int Encrypt::w = 1;
 int main()
 {
     Encrypt word;
@@ -138,6 +146,16 @@ int main()
     word.Encryption();
     word.Decrypt();
     cout << word.GetWord() << endl;
+
+    cout << endl;
+
+    Encrypt Word1;
+    Word1.SetWord("NEGM-ELG3AN");
+
+    Word1.Encryption();
+    Word1.Decrypt();
+    cout << Word1.GetWord() << endl;
+
     //word.Encrpyt();
     //cout << word.GetWord() << endl;
     
