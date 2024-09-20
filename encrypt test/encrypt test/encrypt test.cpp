@@ -4,6 +4,7 @@
 #include <iostream>
 #include <limits>
 using namespace std;
+
 class Encrypt
 {
     string _word;
@@ -76,8 +77,9 @@ long long int Encrypt::y = 1;
 long long int Encrypt::w = 1;
 int main()
 {
-    Encrypt word;
-    word.SetWord("zzzz");
+    /**/
+   // Encrypt word;
+    //word.SetWord("zzzz");
     
     /*word.Encrpyt();
     cout << word.GetWord() << endl;
@@ -88,15 +90,15 @@ int main()
     word.Encrpyt();
     cout << word.GetWord() << endl;
     */
-    word.Encryption();
+    //word.Encryption();
 
-    word.Decrypt();
-    cout << word.GetWord() << endl;
+    //word.Decrypt();
+    //cout << word.GetWord() << endl;
 
-    cout << endl;
+//    cout << endl;
 
-    Encrypt word2;
-    word2.SetWord("aaaa");
+  //  Encrypt word2;
+    //word2.SetWord("aaaa");
 
     /*word2.Encrpyt();
     cout << word2.GetWord() << endl;
@@ -107,15 +109,15 @@ int main()
     word2.Encrpyt();
     cout << word2.GetWord() << endl;
     */
-    word2.Encryption();
+    //word2.Encryption();
 
-    word2.Decrypt();
-    cout << word2.GetWord() << endl;
+    //word2.Decrypt();
+    //cout << word2.GetWord() << endl;
 
-    cout << endl;
+    //cout << endl;
 
-    Encrypt word3;
-    word3.SetWord("NEGM");
+    //Encrypt word3;
+    //word3.SetWord("NEGM");
     /*
     word3.Encrpyt();
     cout << word3.GetWord() << endl;
@@ -126,11 +128,11 @@ int main()
     word3.Encrpyt();
     cout << word3.GetWord() << endl;
     */
-    word3.Encryption();
-    word3.Decrypt();
-    cout << word3.GetWord() << endl;
+    //word3.Encryption();
+    //word3.Decrypt();
+//    cout << word3.GetWord() << endl;
 
-    cout << endl;
+  //  cout << endl;
 
     /*word.Encrpyt();
     cout << word.GetWord() << endl;
@@ -143,7 +145,7 @@ int main()
 
     
     */
-    word.Encryption();
+    /**word.Encryption();
     word.Decrypt();
     cout << word.GetWord() << endl;
 
@@ -154,7 +156,7 @@ int main()
 
     Word1.Encryption();
     Word1.Decrypt();
-    cout << Word1.GetWord() << endl;
+    cout << Word1.GetWord() << endl;*/
 
     //word.Encrpyt();
     //cout << word.GetWord() << endl;

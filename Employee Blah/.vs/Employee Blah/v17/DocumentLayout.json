@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\omarh\\doom\\Employee Blah\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F8736A-CA20-4F47-86B4-5E03339E653E}|Employee Blah\\Employee Blah.vcxproj|C:\\Users\\omarh\\doom\\Employee Blah\\Employee Blah\\Employee Blah.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C1F8736A-CA20-4F47-86B4-5E03339E653E}|Employee Blah\\Employee Blah.vcxproj|solutionrelative:Employee Blah\\Employee Blah.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Employee Blah.cpp",
+              "DocumentMoniker": "C:\\Users\\omarh\\doom\\Employee Blah\\Employee Blah\\Employee Blah.cpp",
+              "RelativeDocumentMoniker": "Employee Blah\\Employee Blah.cpp",
+              "ToolTip": "C:\\Users\\omarh\\doom\\Employee Blah\\Employee Blah\\Employee Blah.cpp",
+              "RelativeToolTip": "Employee Blah\\Employee Blah.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwCQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-20T03:50:58.917Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
